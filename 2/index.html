@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Govind & Arya Wedding - Invitation 2</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@400;500;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap">
+<style>
+:root {
+  --ivory: #FBF7EE;
+  --ivory-2: #F4ECDA;
+  --ink: #3A2A1E;
+  --muted: #7A6A58;
+  --gold: #B8914A;
+  --gold-hi: #E9CB84;
+  --gold-lo: #8A6526;
+  --gold-grad: linear-gradient(135deg, #8A6526 0%, #E9CB84 35%, #B8914A 55%, #F2D99A 75%, #8A6526 100%);
+  --line: rgba(184, 145, 74, 0.5);
+  --wood-1: #4E2814;
+  --wood-2: #7A4423;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--ivory); }
+body {
+  margin: 0; color: var(--ink);
+  background: radial-gradient(ellipse at top, #FFFDF7, var(--ivory) 60%, var(--ivory-2));
+  font-family: "Manrope", system-ui, sans-serif; font-size: 15px; line-height: 1.7;
+  overflow-x: hidden;
+  padding-left: max(12px, env(safe-area-inset-left, 0px));
+  padding-right: max(12px, env(safe-area-inset-right, 0px));
+  padding-block: 16px 26px;
+}
+body.locked { overflow: hidden; }
+/* handmade paper grain */
+body::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 4; opacity: 0.07; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.12  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; margin: 0; line-height: 1.08; text-wrap: balance; }
+.ml { font-family: "Noto Serif Malayalam", "Cormorant Garamond", serif; }
+.wrap { max-width: 760px; margin: 0 auto; }
+.eyebrow { font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-lo); text-align: center; font-weight: 700; margin: 0; }
+.center { text-align: center; }
+.muted { color: var(--muted); }
+
+/* Gold foil: a slow light sweep across gold text */
+.foil {
+  background: linear-gradient(110deg, #7A5520 0%, #B8914A 25%, #F7E3AE 42%, #FFF6D8 48%, #D9B66A 56%, #8A6526 80%, #B8914A 100%);
+  background-size: 260% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: foil 7s ease-in-out infinite;
+}
+@keyframes foil { 0% { background-position: 100% 0; } 100% { background-position: -160% 0; } }
+
+/* Page frame with a kasavu (gold zari) border on all four sides */
+.frame { position: relative; padding: 48px 34px 40px; background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0)); box-shadow: 0 30px 60px -40px rgba(58,42,30,0.45); }
+.band { position: absolute; pointer-events: none; z-index: 1; }
+.band.t, .band.b { left: 0; right: 0; height: 20px; }
+.band.t { top: 0; } .band.b { bottom: 0; transform: scaleY(-1); }
+.band.l, .band.r { top: 0; bottom: 0; width: 20px; }
+.band.l { left: 0; } .band.r { right: 0; transform: scaleX(-1); }
+.band.t, .band.b {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 248, 225, 0.35) 0 1px, transparent 1px 4px),
+    linear-gradient(180deg, #A07A35 0 2px, var(--ivory) 2px 4px, #B8914A 4px 6px, #E9CB84 6px 9px, #C9A04E 9px 12px, #F2D99A 12px 13px, var(--ivory) 13px 15px, #A07A35 15px 16px, transparent 16px);
+}
+.band.l, .band.r {
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 248, 225, 0.35) 0 1px, transparent 1px 4px),
+    linear-gradient(90deg, #A07A35 0 2px, var(--ivory) 2px 4px, #B8914A 4px 6px, #E9CB84 6px 9px, #C9A04E 9px 12px, #F2D99A 12px 13px, var(--ivory) 13px 15px, #A07A35 15px 16px, transparent 16px);
+}
+.flourish { position: absolute; width: 60px; height: 60px; color: var(--gold); z-index: 2; }
+.flourish.tl { top: 22px; left: 22px; }
+.flourish.tr { top: 22px; right: 22px; transform: scaleX(-1); }
+.flourish.bl { bottom: 22px; left: 22px; transform: scaleY(-1); }
+.flourish.br { bottom: 22px; right: 22px; transform: scale(-1, -1); }
+
+/* Invocation */
+.ganesha { width: 74px; height: auto; display: block; margin: 0 auto; }
+.subha { font-size: 15px; color: var(--gold-lo); margin: 6px 0 0; letter-spacing: 0.04em; }
+.greet { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 22px; color: var(--ink); margin: 14px 0 0; }
+
+/* Mandap arch around the couple */
+.mandap { position: relative; width: min(92vw, 480px); margin: 30px auto 0; aspect-ratio: 797 / 1000; }
+.mandap .arch {
+  position: absolute; top: 30%; left: 22%; right: 22%; bottom: 2%; border-radius: 50% 50% 4px 4px / 17% 17% 4px 4px; background: var(--ivory-2); overflow: hidden;
+}
+/* Watercolour mandap frame, drawn over the couple's photo */
+.mandap .mandap-frame { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }
+.thoranam img { display: block; width: 100%; height: auto; }
+.mandap .arch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; animation: breathe 16s ease-in-out infinite alternate; }
+@keyframes breathe { from { transform: scale(1.02); } to { transform: scale(1.09) translate(-1%, -1%); } }
+.mandap .arch::after { content: ""; position: absolute; inset: 9px; border-radius: 999px 999px 6px 6px / 350px 350px 6px 6px; border: 1px solid rgba(255, 246, 220, 0.75); pointer-events: none; }
+.mandap svg.top { position: absolute; top: -28px; left: 50%; transform: translateX(-50%); width: 124px; height: 58px; color: var(--gold); z-index: 3; }
+.mandap .pillar { position: absolute; bottom: -10px; width: 22px; height: 58%; background: var(--gold-grad); border-radius: 4px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25), 0 6px 12px -6px rgba(58,42,30,0.5); z-index: 1; }
+.mandap .pillar.l { left: -12px; } .mandap .pillar.r { right: -12px; }
+.mandap .pillar::before, .mandap .pillar::after { content: ""; position: absolute; left: -5px; right: -5px; height: 9px; background: var(--gold-grad); border-radius: 3px; }
+.mandap .pillar::before { top: -6px; } .mandap .pillar::after { bottom: -6px; }
+.mandap .base { position: absolute; bottom: -16px; left: 50%; transform: translateX(-50%); width: 136%; height: 14px; border-radius: 4px; background: var(--gold-grad); z-index: 2; }
+
+.names { font-size: clamp(38px, 11vw, 86px); font-style: italic; font-weight: 600; line-height: 1; margin-top: 34px; }
+.names .amp { font-style: normal; font-size: 0.6em; vertical-align: middle; margin: 0 4px; }
+.names-art { margin: 34px 0 0; }
+.names-art img { display: block; width: min(92vw, 520px); height: auto; margin: 0 auto; }
+.names-ml { font-size: clamp(20px, 5vw, 26px); color: var(--gold-lo); margin-top: 8px; font-weight: 600; }
+.lead { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 19px; color: var(--ink); max-width: 500px; margin: 16px auto 0; line-height: 1.5; }
+.date-band { display: inline-block; margin-top: 18px; padding: 8px 22px; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-lo); font-weight: 700; }
+
+.divider { display: flex; align-items: center; gap: 12px; justify-content: center; margin: 28px 0; color: var(--gold); }
+.divider::before, .divider::after { content: ""; height: 1px; flex: 1; max-width: 160px; background: linear-gradient(90deg, transparent, var(--gold)); }
+.divider::after { transform: scaleX(-1); }
+.divider svg { width: 22px; height: 22px; flex: 0 0 auto; }
+
+.families { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; text-align: center; }
+.families .lbl { font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-lo); font-weight: 700; display: block; }
+.families h3 { font-size: 27px; color: var(--ink); margin: 8px 0 6px; font-weight: 600; }
+.families p { margin: 4px 0 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
+
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.card { position: relative; padding: 26px 20px; text-align: center; border-radius: 4px; background: linear-gradient(180deg, #FFFCF4, #F6EEDB); border: 1px solid var(--line); box-shadow: inset 0 0 0 4px #FBF6EA, inset 0 0 0 5px rgba(184,145,74,0.4), 0 20px 40px -32px rgba(58,42,30,0.5); }
+.card h2 { font-size: 28px; margin: 6px 0 16px; color: var(--ink); }
+.card .eyebrow .ml { letter-spacing: 0; text-transform: none; font-size: 13px; }
+.count { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.count div { padding: 10px 0; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); }
+.count b { display: block; font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: 32px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.count span { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.steps { list-style: none; margin: 4px 0 0; padding: 0; }
+.steps li { padding: 12px 0; border-top: 1px solid rgba(184,145,74,0.35); }
+.steps li:first-child { border-top: 0; }
+.steps li { display: flex; align-items: center; justify-content: center; gap: 14px; }
+.step-text { text-align: center; }
+.ritual-icon { flex: 0 0 56px; width: 56px; height: auto; }
+.steps time { font-family: "Cormorant Garamond", Georgia, serif; font-size: 26px; font-weight: 600; display: block; line-height: 1.1; }
+.steps strong { font-size: 14px; letter-spacing: 0.06em; }
+.steps small { display: block; color: var(--muted); font-size: 12px; }
+.btn { display: inline-block; margin-top: 18px; text-decoration: none; font: inherit; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; padding: 12px 24px; border-radius: 999px; color: #FFF8E8; background: linear-gradient(135deg, #7A5520, #B8914A 50%, #7A5520); box-shadow: 0 10px 20px -12px rgba(58,42,30,0.6); border: 0; cursor: pointer; }
+.btn.outline { color: var(--gold-lo); background: transparent; border: 1px solid var(--gold); box-shadow: none; }
+.btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+.venue { position: relative; margin-top: 22px; display: grid; grid-template-columns: 1.05fr 1fr; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: #FFFCF4; }
+.venue img { width: 100%; height: 100%; min-height: 200px; object-fit: cover; display: block; }
+.venue .copy { padding: 24px 20px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+.venue h2 { font-size: 32px; margin: 6px 0 8px; color: var(--ink); }
+.venue p { margin: 0; color: var(--muted); font-size: 14px; }
+.venue .btn { align-self: center; }
+
+.foot { position: relative; margin-top: 28px; min-height: 200px; display: grid; place-items: start center; text-align: center; padding: 0 56px 28px; overflow: hidden; border-radius: 4px; background: #FFFCF4; border: 1px solid var(--line); }
+.foot .edge { position: absolute; top: 0; bottom: 0; width: 50%; height: 100%; object-fit: cover; object-position: center 80%; opacity: 0.9; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 30%, #000 70%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 30%, #000 70%); }
+.foot .edge.l { left: 0; } .foot .edge.r { right: 0; }
+.foot .txt { position: relative; padding: 0; text-shadow: 0 0 6px rgba(255, 250, 235, 0.95), 0 0 14px rgba(255, 250, 235, 0.8); }
+.foot .bless { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 22px; color: var(--gold-lo); line-height: 1.45; }
+.foot .sign { font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; color: var(--ink); margin-top: 12px; }
+.foot .sign span { display: block; font-family: "Manrope", system-ui, sans-serif; font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+/* Petals */
+#petals { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 101; }
+
+/* Opening: carved temple doors with a lamp */
+#gate { position: fixed; inset: 0; z-index: 100; perspective: 1800px; background: #2A160B; }
+.door {
+  position: absolute; top: 0; bottom: 0; width: 50%; overflow: hidden;
+  background:
+    repeating-linear-gradient(92deg, rgba(0,0,0,0.08) 0 2px, transparent 2px 9px),
+    linear-gradient(90deg, var(--wood-1), var(--wood-2) 45%, #5E321A);
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.5);
+  transition: transform 1.6s cubic-bezier(.6,.05,.3,1);
+  backface-visibility: hidden;
+}
+.door.l { left: 0; transform-origin: left center; }
+.door.r { right: 0; transform-origin: right center; }
+#gate.open .door.l { transform: rotateY(-105deg); }
+#gate.open .door.r { transform: rotateY(105deg); }
+.door .panels { position: absolute; inset: 8% 16% 8% 14%; display: grid; grid-template-rows: 1fr 1.5fr 1fr; gap: 6%; }
+.door.r .panels { inset: 8% 14% 8% 16%; }
+.door .panels span {
+  border-radius: 6px;
+  background: radial-gradient(circle, rgba(233,203,132,0.6) 0 2px, transparent 3px) center / 38px 38px;
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,0.3), inset 0 0 0 7px rgba(233,203,132,0.12), inset 4px 4px 14px rgba(0,0,0,0.55), inset -3px -3px 10px rgba(255,220,160,0.12);
+}
+.door.l::after, .door.r::after { content: ""; position: absolute; top: 0; bottom: 0; width: 16px; background: linear-gradient(90deg, #7A5520, #E9CB84 40%, #B8914A 60%, #F2D99A 80%, #7A5520); }
+.door.l::after { right: 0; } .door.r::after { left: 0; }
+.door .knob { position: absolute; top: 86%; width: 30px; height: 30px; margin-top: -15px; border: 4px solid #D9B66A; border-radius: 50%; box-shadow: 0 3px 6px rgba(0,0,0,0.55), inset 0 0 4px rgba(0,0,0,0.4); }
+.door.l .knob { right: 30px; } .door.r .knob { left: 30px; }
+.gate-center {
+  position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  text-align: center; color: #F6E3B4; pointer-events: none; padding: 24px;
+  background: radial-gradient(circle at 50% 48%, rgba(20,10,4,0.65), rgba(20,10,4,0) 46%);
+  transition: opacity 0.6s ease;
+}
+#gate.open .gate-center { opacity: 0; }
+.gate-center .ml { font-size: 18px; color: #E9CB84; }
+.gate-center .gnames { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(38px, 9vw, 56px); line-height: 1; }
+.gate-center .ghint { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #E9CB84; opacity: 0.9; }
+.gate-center .gdear { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 20px; }
+.lamp-btn { pointer-events: auto; background: none; border: 0; padding: 6px; cursor: pointer; border-radius: 50%; }
+.lamp-btn:focus-visible { outline: 2px solid #E9CB84; outline-offset: 4px; }
+.lamp-btn svg { width: 120px; height: auto; display: block; overflow: visible; }
+.gflame { fill: #FFD27A; opacity: 0.18; transform-box: fill-box; transform-origin: 50% 100%; transition: opacity 0.4s ease; }
+#gate.lit .gflame { opacity: 1; animation: flick 1.6s ease-in-out infinite; }
+.gglow { opacity: 0; transition: opacity 0.8s ease; }
+#gate.lit .gglow { opacity: 1; }
+@keyframes flick { 0%,100% { transform: scale(1); } 50% { transform: scale(0.92, 1.08); } }
+
+/* Sanskrit-style type for display text */
+h1, h2, h3, .names, .gnames, .lead, .steps time, .count b, .foot .bless, .foot .sign, .skt {
+  font-family: "Tiro Devanagari Sanskrit", "Cormorant Garamond", Georgia, serif !important;
+}
+.names { font-weight: 400; }
+.skt { color: var(--gold-lo); font-size: 17px; margin: 8px 0 0; letter-spacing: 0.02em; }
+
+/* Vibrant gate: marigold thoranam, warm light, bigger lamp */
+#gate { background: radial-gradient(circle at 50% 45%, #B5561C, #5A220C 70%); }
+.door { background:
+    repeating-linear-gradient(90deg, transparent 0 9px, rgba(60,30,8,0.22) 10px, transparent 13px, rgba(255,214,150,0.07) 16px, transparent 22px),
+    repeating-linear-gradient(86deg, rgba(40,18,6,0.40) 0 1px, transparent 1px 27px),
+    linear-gradient(180deg, rgba(255,236,190,0.22), rgba(20,8,2,0.30) 70%, rgba(20,8,2,0.45)),
+    linear-gradient(90deg, #3B1E0A, #7A4A22 22%, #A36A34 42%, #8A5426 52%, #6E3F1C 74%, #3B1E0A); }
+.door::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(104deg, transparent 22%, rgba(255,240,205,0.30) 38%, rgba(255,240,205,0.08) 46%, transparent 58%, rgba(255,240,205,0.12) 80%, transparent 90%); }
+.thoranam { position: absolute; top: 0; left: 0; right: 0; z-index: 4; pointer-events: none; }
+.thoranam svg { display: block; width: 100%; height: auto; }
+.gate-center { background: radial-gradient(circle at 50% 50%, rgba(255,190,90,0.35), rgba(40,12,2,0.55) 40%, rgba(40,12,2,0) 62%); }
+#gate.lit .gate-center { background: radial-gradient(circle at 50% 52%, rgba(255,210,120,0.75), rgba(255,150,40,0.25) 35%, rgba(40,12,2,0) 65%); }
+.lamp-btn svg { width: min(62vw, 240px); }
+.lamp-img { width: min(62vw, 240px); height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 0 18px rgba(255,190,90,0.55)); transition: filter 0.8s ease; }
+#gate.lit .lamp-img { animation: lampFlicker 1.8s ease-in-out infinite; }
+@keyframes lampFlicker {
+  0%, 100% { filter: drop-shadow(0 0 30px rgba(255, 200, 110, 0.9)) brightness(1.08); transform: scale(1); }
+  35% { filter: drop-shadow(0 0 42px rgba(255, 190, 90, 1)) brightness(1.16); transform: scale(1.015); }
+  70% { filter: drop-shadow(0 0 26px rgba(255, 200, 110, 0.8)) brightness(1.04); transform: scale(0.99); }
+}
+.gate-center .gnames { color: #FFE7A8; text-shadow: 0 2px 18px rgba(255,170,60,0.5); }
+.gate-center .skt { color: #FFD98A; font-size: 20px; }
+
+/* As the doors open, the warm backdrop fades into the cream invitation */
+/* Stepping through: the gate moves towards the viewer and fades as the doors open */
+#gate { transform-origin: 50% 42%; transition: background 0.6s ease, transform 1.9s cubic-bezier(.4, .05, .2, 1); }
+#gate.open { transform: scale(1.4); }
+#gate.open .lamp-img { animation: none; filter: none; }
+
+/* Music toggle */
+#music { position: fixed; z-index: 60; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--gold); background: radial-gradient(circle, #FFFCF4, #F1E2BF); color: var(--gold-lo); font-size: 20px; cursor: pointer; box-shadow: 0 8px 20px -10px rgba(58,42,30,0.6); }
+#music[aria-pressed="true"] { background: var(--gold-grad); color: #FFF8E8; }
+#music:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+@media (max-width: 640px) {
+  .frame { padding: 40px 24px 34px; }
+  .band.t, .band.b { height: 16px; } .band.l, .band.r { width: 16px; }
+  .flourish { width: 44px; height: 44px; top: 18px; }
+  .flourish.tl, .flourish.bl { left: 18px; } .flourish.tr, .flourish.br { right: 18px; }
+  .flourish.bl, .flourish.br { top: auto; bottom: 18px; }
+  .families { gap: 12px; }
+  .pair { grid-template-columns: 1fr; }
+  .venue { grid-template-columns: 1fr; }
+  .venue img { min-height: 170px; }
+  .foot { padding: 24px 16px; }
+  .foot .edge { width: 50%; }
+  .count b { font-size: 26px; }
+  .door .knob { width: 22px; height: 22px; margin-top: -11px; }
+  .door.l .knob { right: 22px; } .door.r .knob { left: 22px; }
+}
+@media print {
+  #gate, #music, #petals { display: none !important; }
+  body.locked { overflow: visible; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .foil { animation: none; background-position: 40% 0; }
+  .frame { box-shadow: none; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mandap .arch img, .foil, #gate.lit .gflame { animation: none; }
+  #petals { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Opening gate -->
+<div id="gate" role="dialog" aria-label="Wedding invitation of Govind and Arya">
+  <div class="door l"><div class="panels"><span></span><span></span><span></span></div><span class="knob"></span></div>
+  <div class="door r"><div class="panels"><span></span><span></span><span></span></div><span class="knob"></span></div>
+  <div class="gate-center">
+    <p class="skt" style="margin:0">॥ शुभ विवाह ॥</p>
+    <p class="gnames" style="margin:0">Govind &amp; Arya</p>
+    <button class="lamp-btn" id="lampBtn" aria-label="Light the lamp to open the invitation">
+      <img class="lamp-img" src="img/art_lamp.png" alt="">
+    </button>
+    <p class="ghint">Tap anywhere to open</p>
+  </div>
+</div>
+
+<div class="wrap">
+<div class="frame">
+  <span class="band t"></span><span class="band b"></span><span class="band l"></span><span class="band r"></span>
+  <svg class="flourish tl" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 60 V14 Q4 4 14 4 H60"/><path d="M10 56 V18 Q10 10 18 10 H56" stroke-width="0.7"/><circle cx="16" cy="16" r="3.2"/><path d="M16 22 C 22 22, 26 28, 26 36 M22 16 C 22 22, 28 26, 36 26"/></g></svg>
+  <svg class="flourish tr" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 60 V14 Q4 4 14 4 H60"/><path d="M10 56 V18 Q10 10 18 10 H56" stroke-width="0.7"/><circle cx="16" cy="16" r="3.2"/><path d="M16 22 C 22 22, 26 28, 26 36 M22 16 C 22 22, 28 26, 36 26"/></g></svg>
+  <svg class="flourish bl" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 60 V14 Q4 4 14 4 H60"/><path d="M10 56 V18 Q10 10 18 10 H56" stroke-width="0.7"/><circle cx="16" cy="16" r="3.2"/><path d="M16 22 C 22 22, 26 28, 26 36 M22 16 C 22 22, 28 26, 36 26"/></g></svg>
+  <svg class="flourish br" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 60 V14 Q4 4 14 4 H60"/><path d="M10 56 V18 Q10 10 18 10 H56" stroke-width="0.7"/><circle cx="16" cy="16" r="3.2"/><path d="M16 22 C 22 22, 26 28, 26 36 M22 16 C 22 22, 28 26, 36 26"/></g></svg>
+
+  <header class="center">
+    <img class="ganesha" src="img/art_ganesha.png" alt="Lord Ganesha">
+    <p class="skt">॥ श्री गणेशाय नमः ॥</p>
+    <p class="eyebrow" style="margin-top:12px">Together with our families</p>
+
+    <div class="mandap reveal">
+      <div class="arch"><img src="img/art_couple.jpg" alt="Illustration of Govind and Arya"></div>
+      <img class="mandap-frame" src="img/art_mandap.png" alt="" aria-hidden="true">
+    </div>
+
+    <h1 class="names-art"><img src="img/art_names.png" alt="Govind &amp; Arya"></h1>
+    <p class="lead">With joy in our hearts and the blessings of our elders, we invite you and your family to celebrate the wedding of Govind &amp; Arya.</p>
+    <p><span class="date-band">Sunday · 24th January 2027</span></p>
+  </header>
+
+  <div class="divider" aria-hidden="true"><svg viewBox="0 0 22 22"><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="9"/><path d="M11 3 C 8 8, 8 14, 11 19 C 14 14, 14 8, 11 3 Z"/></g></svg></div>
+
+  <section class="families reveal" aria-label="Families">
+    <div>
+      <span class="lbl">Groom</span>
+      <h3>Govind S.</h3>
+      <p>Son of Mr. C. R. Sasidharan Nair &amp;<br>Mrs. Geetha S. Nair</p>
+      <p>Saugandhikam, Medical College, Thiruvananthapuram</p>
+    </div>
+    <div>
+      <span class="lbl">Bride</span>
+      <h3>Arya G.</h3>
+      <p>Daughter of Mr. K. Anilkumar &amp;<br>Mrs. Geetha S.</p>
+      <p>Dhanya, Kuravankonam, Thiruvananthapuram</p>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><svg viewBox="0 0 22 22"><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="9"/><path d="M11 3 C 8 8, 8 14, 11 19 C 14 14, 14 8, 11 3 Z"/></g></svg></div>
+
+  <section class="pair reveal" aria-label="Date and ceremony">
+    <div class="card">
+      <p class="eyebrow">Save the date</p>
+      <h2>Sunday, 24th January 2027</h2>
+      <div class="count" aria-label="Time until the Sweekaranam">
+        <div><b id="d" class="foil">--</b><span>Days</span></div>
+        <div><b id="h" class="foil">--</b><span>Hours</span></div>
+        <div><b id="m" class="foil">--</b><span>Minutes</span></div>
+        <div><b id="s" class="foil">--</b><span>Seconds</span></div>
+      </div>
+      <a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Wedding+of+Govind+%26+Arya&amp;dates=20270124T054500Z/20270124T070200Z&amp;location=Punartham+Auditorium%2C+Maruthankuzhi%2C+Thiruvananthapuram">Add to calendar</a>
+    </div>
+    <div class="card">
+      <p class="eyebrow">Shubha Muhurtham</p>
+      <h2>Order of the ceremony</h2>
+      <ol class="steps">
+        <li><img class="ritual-icon" src="img/ritual_thali.png" alt=""><div class="step-text"><time class="foil">11:15 AM</time><strong>Sweekaranam</strong><small>11:15 AM – 11:30 AM</small></div></li>
+        <li><img class="ritual-icon" src="img/ritual_kalasam.png" alt=""><div class="step-text"><time class="foil">12:10 PM</time><strong>Muhurtham</strong><small>12:10 PM – 12:32 PM</small></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="venue reveal" aria-labelledby="venue">
+    <img src="img/art_venue.jpg" alt="Illustration of Punartham Auditorium">
+    <div class="copy">
+      <p class="eyebrow">Venue</p>
+      <h2 id="venue">Punartham Auditorium</h2>
+      <p>Sree Udiyanoor Devi Temple<br>Maruthankuzhi, Thiruvananthapuram</p>
+      <a class="btn outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Punartham+Auditorium+Sree+Udiyanoor+Devi+Temple+Maruthankuzhi+Thiruvananthapuram">Open in Google Maps</a>
+    </div>
+  </section>
+
+  <footer class="foot reveal">
+    <img class="edge l" src="img/art_water_l.jpg" alt="">
+    <img class="edge r" src="img/art_water_r.jpg" alt="">
+    <div class="txt">
+      <p class="bless">Your presence, prayers and blessings<br>are the most precious gifts to the bride and groom.</p>
+      <p class="sign">With best compliments,<br>Akhil S.</p>
+    </div>
+  </footer>
+</div>
+</div>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+<button id="music" aria-pressed="false" aria-label="Play music">♪</button>
+
+<audio id="bgm" src="audio/wedding-music.mp3" loop preload="auto"></audio>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasGsap = typeof window.gsap !== 'undefined';
+
+  // Marigold thoranam: swags of marigolds with mango leaves and hanging strands.
+  (function () {
+    var host = document.getElementById('thoranam');
+    var W = 1000, swags = 4, seg = W / swags, out = [];
+    var cols = ['#FF9F1C', '#FFC233', '#F47B20', '#FFD45C'];
+    for (var s = 0; s < swags; s++) {
+      var x0 = s * seg, x1 = x0 + seg, sag = 70;
+      for (var i = 0; i <= 18; i++) {
+        var t = i / 18, x = x0 + (x1 - x0) * t, y = 14 + sag * 4 * t * (1 - t);
+        out.push('<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="10" fill="' + cols[(i + s) % 4] + '" stroke="#C25A0C" stroke-width="1"/>');
+      }
+    }
+    for (var j = 0; j <= swags; j++) {
+      var hx = j * seg;
+      out.push('<path d="M' + (hx - 20) + ' 4 Q' + hx + ' 40 ' + (hx + 20) + ' 4 Q' + hx + ' 14 ' + (hx - 20) + ' 4Z" fill="#3E8E2F"/>');
+      for (var k = 0; k < 6; k++) out.push('<circle cx="' + hx + '" cy="' + (30 + k * 18) + '" r="8" fill="' + cols[k % 4] + '" stroke="#C25A0C" stroke-width="1"/>');
+      out.push('<circle cx="' + hx + '" cy="' + (30 + 6 * 18) + '" r="5" fill="#E23B3B"/>');
+    }
+    // Garland removed: small flowers fall over the gate instead.
+  })();
+
+  // Music: a soft tanpura drone, synthesised in the page. Starts when the lamp is tapped.
+  var actx = null, master = null, playing = false, loopTimer = null;
+  function setupAudio() {
+    if (actx) return true;
+    var AC = window.AudioContext || window.webkitAudioContext; if (!AC) return false;
+    actx = new AC();
+    master = actx.createGain(); master.gain.value = 0;
+    var verb = actx.createConvolver(), len = actx.sampleRate * 3, ir = actx.createBuffer(2, len, actx.sampleRate);
+    for (var c = 0; c < 2; c++) { var d = ir.getChannelData(c); for (var i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.5); }
+    verb.buffer = ir;
+    var wet = actx.createGain(); wet.gain.value = 0.45;
+    master.connect(actx.destination); master.connect(verb); verb.connect(wet); wet.connect(actx.destination);
+    noiseBuf = makeNoise(); startDrone();
+    return true;
+  }
+  // Carnatic-style, all made in the page: a tanpura drone on Sa and Pa, a veena-like melody in Raga Mohanam
+  // (Sa Ri2 Ga3 Pa Dha2), and mridangam on an 8-beat Adi tala at 80 beats a minute.
+  var SA = 146.83;                        // Sa = D3
+  var BEAT = 0.75;
+  var noiseBuf = null;
+  var phrases = [
+    [0, 2, 4, 7, 9, 7, 4, 2],
+    [0, 4, 7, 9, 12, 9, 7, 4],
+    [7, 4, 2, 0, 2, 4, 7, 9],
+    [9, 7, 4, 2, 4, 7, 9, 12]
+  ];
+  function ratio(semi) { return SA * Math.pow(2, semi / 12); }
+  function makeNoise() {
+    var len = Math.floor(actx.sampleRate * 0.3), buf = actx.createBuffer(1, len, actx.sampleRate), d = buf.getChannelData(0);
+    for (var i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3);
+    return buf;
+  }
+  function startDrone() {
+    [SA, SA * 1.5].forEach(function (f) {
+      var o = actx.createOscillator(), lp = actx.createBiquadFilter(), g = actx.createGain();
+      o.type = 'sawtooth'; o.frequency.value = f;
+      lp.type = 'lowpass'; lp.frequency.value = 500;
+      g.gain.value = 0.035;
+      o.connect(lp); lp.connect(g); g.connect(master); o.start();
+    });
+  }
+  // Nadaswaram-style reed voice: a bright sawtooth with slow vibrato, held and then released.
+  function reed(freq, when, dur) {
+    var o = actx.createOscillator(), lfo = actx.createOscillator(), lfoGain = actx.createGain(), f = actx.createBiquadFilter(), g = actx.createGain();
+    o.type = 'sawtooth'; o.frequency.value = freq;
+    lfo.frequency.value = 5.5; lfoGain.gain.value = freq * 0.012;
+    lfo.connect(lfoGain); lfoGain.connect(o.frequency);
+    f.type = 'lowpass'; f.frequency.setValueAtTime(1500, when); f.frequency.exponentialRampToValueAtTime(900, when + dur);
+    g.gain.setValueAtTime(0.0001, when); g.gain.exponentialRampToValueAtTime(0.11, when + 0.12); g.gain.setValueAtTime(0.11, when + dur * 0.8); g.gain.exponentialRampToValueAtTime(0.0001, when + dur);
+    o.connect(f); f.connect(g); g.connect(master);
+    o.start(when); lfo.start(when); o.stop(when + dur + 0.1); lfo.stop(when + dur + 0.1);
+  }
+  function mridangam(when, vol, freq) {
+    var src = actx.createBufferSource(), f = actx.createBiquadFilter(), g = actx.createGain();
+    src.buffer = noiseBuf;
+    f.type = 'bandpass'; f.frequency.value = freq; f.Q.value = 3;
+    g.gain.setValueAtTime(vol, when); g.gain.exponentialRampToValueAtTime(0.0001, when + 0.22);
+    src.connect(f); f.connect(g); g.connect(master);
+    src.start(when); src.stop(when + 0.25);
+  }
+  function scheduleCycle() {
+    var t = actx.currentTime + 0.1, p = phrases[Math.floor(Math.random() * phrases.length)];
+    for (var i = 0; i < 8; i++) {
+      var when = t + i * BEAT;
+      reed(ratio(p[i]), when, BEAT * 1.9);
+      mridangam(when, i === 0 ? 0.9 : 0.5, 160);          // stronger on the first beat
+      mridangam(when + BEAT / 2, 0.3, 2600);               // light off-beat chat
+    }
+  }
+  function startMusic() {
+    if (playing) return;
+    var bgm = document.getElementById('bgm');
+    if (bgm) {
+      bgm.muted = false;
+      bgm.play().then(function () { playing = true; musicBtn.setAttribute('aria-pressed', 'true'); musicBtn.setAttribute('aria-label', 'Pause music'); }).catch(function () {});
+      return;
+    }
+    if (!setupAudio()) return;
+    actx.resume();
+    master.gain.cancelScheduledValues(actx.currentTime);
+    master.gain.linearRampToValueAtTime(0.8, actx.currentTime + 2);
+    scheduleCycle(); loopTimer = setInterval(scheduleCycle, 6000);
+    playing = true; musicBtn.setAttribute('aria-pressed', 'true'); musicBtn.setAttribute('aria-label', 'Pause music');
+  }
+  function stopMusic() {
+    var bgm = document.getElementById('bgm');
+    if (bgm) { bgm.pause(); playing = false; musicBtn.setAttribute('aria-pressed', 'false'); musicBtn.setAttribute('aria-label', 'Play music'); return; }
+    if (!actx) return;
+    clearInterval(loopTimer);
+    master.gain.linearRampToValueAtTime(0, actx.currentTime + 0.8);
+    playing = false; musicBtn.setAttribute('aria-pressed', 'false'); musicBtn.setAttribute('aria-label', 'Play music');
+  }
+  var musicBtn = document.getElementById('music');
+  musicBtn.addEventListener('click', function () { if (playing) stopMusic(); else startMusic(); });
+
+  // Opening: light the lamp, then the doors swing open.
+  var gate = document.getElementById('gate');
+  var lamp = document.getElementById('lampBtn');
+  var opened = false;
+  function finish() { gate.hidden = true; document.body.classList.remove('locked'); leafMode = true; startReveals(); }
+  function openGate() {
+    if (opened) return; opened = true;
+    gate.classList.add('lit');
+    setTimeout(function () { gate.classList.add('open'); }, 1100);
+    setTimeout(finish, 2900);
+  }
+  document.body.classList.add('locked');
+  lamp.addEventListener('click', function () { startMusic(); openGate(); });
+  gate.addEventListener('click', function () { startMusic(); openGate(); });   // a tap anywhere opens the gate and starts the music
+
+  // Scroll reveals and a little depth on the mandap.
+  var revealsStarted = false;
+  function startReveals() {
+    if (revealsStarted || !hasGsap || reduce) return; revealsStarted = true;
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.reveal').forEach(function (el) {
+      gsap.from(el, { y: 26, opacity: 0, duration: 1.1, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+    });
+    gsap.to('.mandap svg.top', { y: -10, ease: 'none', scrollTrigger: { trigger: '.mandap', start: 'top 80%', end: 'bottom top', scrub: true } });
+  }
+  if (reduce) startReveals();
+
+  // Browsers only allow sound after a tap, so the music starts on the first tap or click anywhere on the page.
+  // The track starts on load, muted (browsers allow muted autoplay). The first touch, click or key press
+  // anywhere on the page unmutes it and starts it with sound.
+  var bgmEl = document.getElementById('bgm');
+  var unlocked = false;
+  function setPlayingUI(on) { playing = on; musicBtn.setAttribute('aria-pressed', on ? 'true' : 'false'); musicBtn.setAttribute('aria-label', on ? 'Pause music' : 'Play music'); }
+  function unlockAudio() {
+    if (!bgmEl || unlocked) return;
+    unlocked = true;
+    bgmEl.volume = 0.8; bgmEl.muted = false;
+    bgmEl.play().then(function () { setPlayingUI(true); }).catch(function () { unlocked = false; });
+    ['pointerdown', 'touchstart', 'keydown', 'click'].forEach(function (ev) { document.removeEventListener(ev, unlockAudio); });
+  }
+  if (bgmEl) {
+    bgmEl.volume = 0.8; bgmEl.muted = true;
+    bgmEl.play().then(function () { setPlayingUI(true); }).catch(function () {});
+    ['pointerdown', 'touchstart', 'keydown', 'click'].forEach(function (ev) { document.addEventListener(ev, unlockAudio, { passive: true }); });
+  }
+
+  // Countdown to the Sweekaranam, 11:15 AM IST, 24 January 2027.
+  var target = Date.UTC(2027, 0, 24, 5, 45, 0);
+  var els = { d: document.getElementById('d'), h: document.getElementById('h'), m: document.getElementById('m'), s: document.getElementById('s') };
+  function tick() {
+    var sec = Math.max(0, Math.floor((target - Date.now()) / 1000));
+    els.d.textContent = Math.floor(sec / 86400);
+    els.h.textContent = String(Math.floor(sec % 86400 / 3600)).padStart(2, '0');
+    els.m.textContent = String(Math.floor(sec % 3600 / 60)).padStart(2, '0');
+    els.s.textContent = String(sec % 60).padStart(2, '0');
+  }
+  tick(); setInterval(tick, 1000);
+
+  // Jasmine and marigold petals, sparse and slow.
+  var cv = document.getElementById('petals');
+  if (cv && !reduce && cv.getContext) {
+    var ctx = cv.getContext('2d'), W, H, dpr = Math.min(window.devicePixelRatio || 1, 2), list = [], leafMode = false;
+    function size() { W = window.innerWidth; H = window.innerHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    size(); window.addEventListener('resize', size);
+    function pickKind() {
+      var r = Math.random();
+      if (leafMode && r < 0.3) return 'leaf';
+      if (leafMode && r > 0.97) return 'bell';
+      if (r > 0.86) return 'jasmine';
+      return 'marigold';
+    }
+    function make(anywhere) {
+      return { x: Math.random() * W, y: anywhere ? Math.random() * H : -20, s: 6 + Math.random() * 5, vy: 0.35 + Math.random() * 0.5, sway: Math.random() * 6, rot: Math.random() * 6, vr: (Math.random() - 0.5) * 0.02, kind: pickKind() };
+    }
+    for (var k = 0; k < 120; k++) list.push(make(true));
+    function jasmine(p) {
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+      ctx.fillStyle = 'rgba(255, 252, 240, 0.95)'; ctx.strokeStyle = 'rgba(200, 180, 140, 0.5)'; ctx.lineWidth = 0.5;
+      for (var i = 0; i < 5; i++) { ctx.rotate(Math.PI * 2 / 5); ctx.beginPath(); ctx.ellipse(0, -p.s * 0.6, p.s * 0.32, p.s * 0.6, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); }
+      ctx.fillStyle = 'rgba(233, 203, 132, 0.95)'; ctx.beginPath(); ctx.arc(0, 0, p.s * 0.18, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+    }
+    function marigold(p) {
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+      ctx.fillStyle = 'rgba(240, 150, 30, 0.9)'; ctx.beginPath(); ctx.ellipse(0, 0, p.s * 0.55, p.s * 0.35, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = 'rgba(255, 196, 60, 0.9)'; ctx.beginPath(); ctx.ellipse(0, -p.s * 0.05, p.s * 0.35, p.s * 0.2, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+    }
+    function leaf(p) {
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+      ctx.fillStyle = 'rgba(78, 140, 60, 0.92)';
+      ctx.beginPath(); ctx.moveTo(0, -p.s); ctx.quadraticCurveTo(p.s * 0.6, 0, 0, p.s); ctx.quadraticCurveTo(-p.s * 0.6, 0, 0, -p.s); ctx.fill();
+      ctx.strokeStyle = 'rgba(210, 235, 170, 0.6)'; ctx.lineWidth = 0.6;
+      ctx.beginPath(); ctx.moveTo(0, -p.s); ctx.lineTo(0, p.s); ctx.stroke();
+      ctx.restore();
+    }
+    function bell(p) {
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * 0.5);
+      var g = ctx.createLinearGradient(-p.s, 0, p.s, 0);
+      g.addColorStop(0, '#8A6526'); g.addColorStop(0.45, '#F2D99A'); g.addColorStop(1, '#8A6526');
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(0, 0, p.s * 0.55, Math.PI, 0); ctx.lineTo(p.s * 0.8, p.s * 0.5); ctx.lineTo(-p.s * 0.8, p.s * 0.5); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.arc(0, p.s * 0.62, p.s * 0.14, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+    }
+    (function frame() {
+      if (window.innerWidth !== W || window.innerHeight !== H) {
+        size();
+        for (var q = 0; q < list.length; q++) { list[q].x = Math.random() * W; list[q].y = Math.random() * H; }
+      }
+      if (!W || !H) { requestAnimationFrame(frame); return; }
+      ctx.clearRect(0, 0, W, H);
+      for (var i = 0; i < list.length; i++) {
+        var p = list[i];
+        p.y += p.vy * (leafMode ? 0.7 : 1); p.sway += 0.015; p.x += Math.sin(p.sway) * (p.kind === 'leaf' ? 0.9 : 0.35); p.rot += p.vr;
+        if (p.y > H + 20) list[i] = make(false);
+        if (p.kind === 'leaf') leaf(p);
+        else if (p.kind === 'jasmine') jasmine(p);
+        else if (p.kind === 'bell') bell(p);
+        else marigold(p);
+      }
+      requestAnimationFrame(frame);
+    })();
+  }
+})();
+</script>
+</body>
+</html>
