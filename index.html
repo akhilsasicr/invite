@@ -275,6 +275,14 @@ h1, h2, h3, .names, .gnames, .lead, .steps time, .count b, .foot .bless, .foot .
   .mandap .arch img, .foil, #gate.lit .gflame { animation: none; }
   #petals { display: none; }
 }
+/* Closing card: a plain gold-bordered box, like the page frame */
+.foot { display: block; margin-top: 28px; min-height: 0; padding: 0; background: none; border: none; border-radius: 0; overflow: visible; }
+.foot-box { position: relative; padding: 22px 20px; text-align: center; background: linear-gradient(180deg, #FFFCF4, #F6EEDB); border: 1px solid #B8914A; box-shadow: inset 0 0 0 4px #FBF6EA, inset 0 0 0 5px rgba(184, 145, 74, 0.45); }
+.foot .bless { font-size: 23px; margin: 0; }
+.foot .sign { font-size: 19px; margin: 12px 0 0; }
+.foot-div { display: flex; align-items: center; gap: 10px; justify-content: center; margin: 12px 0; color: #B8914A; }
+.foot-div::before, .foot-div::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, #B8914A); }
+.foot-div::after { transform: scaleX(-1); }
 </style>
 </head>
 <body>
@@ -367,14 +375,7 @@ h1, h2, h3, .names, .gnames, .lead, .steps time, .count b, .foot .bless, .foot .
     </div>
   </section>
 
-  <footer class="foot reveal">
-    <img class="edge l" src="img/art_water_l.jpg" alt="">
-    <img class="edge r" src="img/art_water_r.jpg" alt="">
-    <div class="txt">
-      <p class="bless">Your presence, prayers and blessings<br>are the most precious gifts to the bride and groom.</p>
-      <p class="sign">With best compliments,<br>Akhil S.</p>
-    </div>
-  </footer>
+  <footer class="foot reveal"><div class="foot-box"><p class="bless">Your presence, prayers and blessings are the most precious gifts to the bride and groom.</p><div class="foot-div"><span>&#10047;</span></div><p class="sign">With best compliments, Akhil S.</p></div></footer>
 </div>
 </div>
 
